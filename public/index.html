@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://subtle-druid-430b16.netlify.app/codemate-badge.js" defer></script>
+</head>
+<script src="https://subtle-druid-430b16.netlify.app/codemate-badge.js" defer></script>
+</head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Browser-based Video to GIF Converter using ffmpeg.wasm" />
+    <title>Video to GIF Converter</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3B82F6",
+                        secondary: "#6B7280"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- CORS configuration for ffmpeg.wasm -->
+    <script>
+        // Required for ffmpeg.wasm to work properly
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.crossOriginIsolated === false) {
+                console.warn("Cross-Origin-Isolation is not enabled. ffmpeg.wasm requires this to be enabled for optimal performance.");
+            }
+        });
+    </script>
+</body>
+</html>
